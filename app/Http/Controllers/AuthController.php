@@ -2,11 +2,20 @@
 
 namespace App\Http\Controllers;
 
+
+//allows to use the model, to handle http request, ...
+use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Auth;
+
 
 class AuthController extends Controller
 
 {
+    
     // Show the login page
 public function show ()
     {
@@ -28,12 +37,39 @@ public function login (Request $request)
         return redirect()->back()->withErrors(['login' => 'Invalid credentials']);
 }
 
-  // Show the register page
+    // Show the register page
 public function showRegister ()
     {
-        return view('register');
+        return view('register');  // The registration view
     }
 
+ public function register(Request $request)
+    {
+        // Validate the request data
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:4|',
+        ]);
 
+        if ($validator->fails()) {
+            return response()->json($validator->errors(), 400); // Handle validation errors
+        }
+
+        // Create the user
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password), // this will hash the password for security
+        ]);
+
+
+        // Log the user in
+        Auth::login($user);
+
+        return redirect()->route('dashboard'); // Redirect to dashboard
+       
 }
+}
+
 
