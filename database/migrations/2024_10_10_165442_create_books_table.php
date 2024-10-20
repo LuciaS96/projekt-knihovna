@@ -15,11 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('user_id');
             $table->string('title');
-            $table->string('author');
             $table->string('genre')->nullable();
             $table->text('description')->nullable();
+            $table->enum('status', ['read', 'currently_reading', 'want_to_read']);
             $table->timestamps();
-        
 
         });
     }

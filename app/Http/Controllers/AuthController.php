@@ -30,14 +30,14 @@ public function login (Request $request)
     $credentials = $request->only('email', 'password');
     
    if (auth()->attempt($credentials)) {
-            // Redirect to dashboard or intended page after successful login
+            // redirect to dashboard or intended page after successful login
             return redirect()->intended('dashboard');
         }
         // Redirect back with an error if authentication fails
         return redirect()->back()->withErrors(['login' => 'Invalid credentials']);
 }
 
-    // Show the register page
+    // show the register page
 public function showRegister ()
     {
         return view('register');  // The registration view
@@ -45,18 +45,18 @@ public function showRegister ()
 
  public function register(Request $request)
     {
-        // Validate the request data
+        // validate the requested data
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:4|',
+            'password' => 'required|string|min:4',
         ]);
 
         if ($validator->fails()) {
             return response()->json($validator->errors(), 400); // Handle validation errors
         }
 
-        // Create the user
+        // create the user
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
@@ -68,8 +68,22 @@ public function showRegister ()
         Auth::login($user);
 
         return redirect()->route('dashboard'); // Redirect to dashboard
-       
-}
+    }
+
+        public function logout()
+        {
+        Auth::logout(); // Log the user out
+        return redirect()->route('login'); // Redirect to the login page
+        }
+
+
+         // Add the index method to handle the profile page
+        public function index()
+        {
+        // Return the profile view (assuming it's located in resources/views/profile.blade.php)
+        return view('profile');
+        }
+
 }
 
 
