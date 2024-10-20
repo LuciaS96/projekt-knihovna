@@ -12,9 +12,9 @@ class Book extends Model
     // Corrected $fillable syntax
     protected $fillable = [
         'user_id',
-        'booktitle', // Corrected typo from 'booktile' to 'booktitle'
+        'booktitle',
         'genre',
-        'description', // Add description if needed
+        'description', 
         'status',
     ];
 
