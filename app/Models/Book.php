@@ -12,7 +12,7 @@ class Book extends Model
     // Corrected $fillable syntax
     protected $fillable = [
         'user_id',
-        'booktitle',
+        'title',
         'genre',
         'description', 
         'status',

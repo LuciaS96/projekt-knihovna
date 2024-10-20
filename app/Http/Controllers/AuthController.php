@@ -80,7 +80,7 @@ public function showRegister ()
          // Add the index method to handle the profile page
         public function index()
         {
-        // Return the profile view (assuming it's located in resources/views/profile.blade.php)
+        // Return the profile view
         return view('profile');
         }
 
