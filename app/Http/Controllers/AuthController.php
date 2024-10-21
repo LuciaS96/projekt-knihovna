@@ -16,31 +16,31 @@ class AuthController extends Controller
 
 {
     
-    // Show the login page
+    // show the login page
 public function show ()
     {
         return view('login');
     }
 
-    // Handle the login form submission
+    // handle the login form submitted
 public function login (Request $request)
 {
 
-  // Validate and process login credentials
+  // validate and process login credentials of the user
     $credentials = $request->only('email', 'password');
     
    if (auth()->attempt($credentials)) {
-            // redirect to dashboard or intended page after successful login
+            // redirect the user to dashboard after successful login
             return redirect()->intended('dashboard');
         }
-        // Redirect back with an error if authentication fails
+        // redirect backk with an error if authentication fails
         return redirect()->back()->withErrors(['login' => 'Invalid credentials']);
 }
 
     // show the register page
 public function showRegister ()
     {
-        return view('register');  // The registration view
+        return view('register');  // the registration view
     }
 
  public function register(Request $request)
@@ -53,7 +53,7 @@ public function showRegister ()
         ]);
 
         if ($validator->fails()) {
-            return response()->json($validator->errors(), 400); // Handle validation errors
+            return response()->json($validator->errors(), 400); // handle validation errors
         }
 
         // create the user
@@ -64,10 +64,10 @@ public function showRegister ()
         ]);
 
 
-        // Log the user in
+        // log the user in
         Auth::login($user);
 
-        return redirect()->route('dashboard'); // Redirect to dashboard
+        return redirect()->route('dashboard'); // redirecting the user to dashboard page
     }
 
         public function logout()
@@ -77,10 +77,10 @@ public function showRegister ()
         }
 
 
-         // Add the index method to handle the profile page
+        
         public function index()
         {
-        // Return the profile view
+        // returning the user to the profile view
         return view('profile');
         }
 

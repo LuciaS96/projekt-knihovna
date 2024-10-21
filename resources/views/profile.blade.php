@@ -66,7 +66,7 @@
             </div>
         </div>
 
-        <!-- Action Buttons -->
+        <!-- Buttons for editing profile, viewing the reading list -->
         <div class="bg-indigo-600 p-4 flex justify-between items-center">
             <button class="bg-indigo-500 text-white py-2 px-6 rounded-lg hover:bg-yellow-600">Edit Profile</button>
             <button class="bg-white text-black py-2 px-6 rounded-lg hover:bg-orange-700 hover:text-white">View Reading List</button>

@@ -26,7 +26,7 @@
 
         <!-- Main Content -->
         <div class="flex-grow p-8 bg-gray-100 dark:bg-light">
-            <!-- Dashboard Header -->
+            
             <header class="flex items-center justify-between mb-8">
                 <h1 class="text-4xl font-extrabold text-orange-700 dark:text-white">Welcome, Book Lover!</h1>
                 <!-- Logout Button -->
@@ -38,7 +38,7 @@
                 </form>
             </header>
 
-            <!-- Success Message -->
+           
             @if(session('success'))
                 <div class="bg-green-500 text-white p-4 rounded mb-4">
                     {{ session('success') }}
@@ -47,20 +47,20 @@
 
             <!-- Main Dashboard Content -->
             <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Card 1: Total Books -->
+                
                 <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
                     <h3 class="text-xl font-semibold text-orange-700 dark:text-white mb-4">Total Books</h3>
                     <p class="text-4xl font-bold text-gray-800 dark:text-light">{{ count($books) }}</p>
                 </div>
-                <!-- Card 2: Books Read This Month (placeholder data, can be dynamic) -->
+                
                 <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
                     <h3 class="text-xl font-semibold text-orange-700 dark:text-white mb-4">Books Read This Month</h3>
-                    <p class="text-4xl font-bold text-gray-800 dark:text-light">5</p> <!-- Update dynamically if needed -->
+                    <p class="text-4xl font-bold text-gray-800 dark:text-light">{{ count($books) }}</p> 
                 </div>
-                <!-- Card 3: Favorite Genre (placeholder data, can be dynamic) -->
+             
                 <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
                     <h3 class="text-xl font-semibold text-orange-700 dark:text-white mb-4">Favorite Genre</h3>
-                    <p class="text-2xl font-bold text-gray-800 dark:text-light">Fantasy</p> <!-- Update dynamically if needed -->
+                    <p class="text-2xl font-bold text-gray-800 dark:text-light">Fantasy</p> 
                 </div>
             </section>
 

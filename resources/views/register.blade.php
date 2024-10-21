@@ -46,15 +46,6 @@
                         placeholder="Enter your password" />
                 </div>
 
-                <!-- Confirm Password Field 
-                <div class="mb-6">
-                    <label for="confirm-password" class="block text-sm font-medium text-gray-700">Confirm Password</label>
-                    <input type="password" id="confirm-password" name="confirm_password" required
-                        class="mt-1 px-4 py-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                        placeholder="Confirm your password" />
-                </div>
-                -->
-
                 <!-- Register Button -->
                 <div class="flex justify-center">
                     <button type="submit"

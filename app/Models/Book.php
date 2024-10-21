@@ -9,7 +9,6 @@ class Book extends Model
 {
     use HasFactory;
 
-    // Corrected $fillable syntax
     protected $fillable = [
         'user_id',
         'title',
@@ -18,12 +17,11 @@ class Book extends Model
         'status',
     ];
 
-    // Define relationship with User
+    // defined relationship with User
     public function user()
     {
         return $this->belongsTo(User::class);
     }
 
-    // No need for extra relationships for title, genre, description, and status 
-    // as they are already part of the Book model fields (not separate models).
+    
 }
