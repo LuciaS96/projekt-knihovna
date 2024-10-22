@@ -140,10 +140,11 @@
         </div>
       </section>
 
-      <!--Image section-->
-      <section class="flex justify-center pb-16">
-        <img src="./images/rusticshelve.JPG" alt="rusticshelve" class="" />
-      </section>
+      <!-- Image section -->
+<section class="flex justify-center pb-16">
+    <img src="{{ asset('images/rusticshelve.JPG') }}" alt="rusticshelve" class="" />
+</section>
+
 
       <!-- How It Works Section
       <section class="bg-gray-50 py-16">
@@ -166,8 +167,8 @@
             </div>
           </div>
         </div>
-      </section>
-       -->
+      </section> -->
+       
 
       <!-- Call to Action Section -->
       <section class="bg-indigo-600 text-white py-16 text-center">
