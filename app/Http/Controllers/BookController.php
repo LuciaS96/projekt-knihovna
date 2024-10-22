@@ -54,4 +54,15 @@ class BookController extends Controller
     // redirect back to the dashboard + message 
     return redirect()->route('dashboard')->with('success', 'Book added successfully!');
     }
+
+    public function destroy($id)
+{
+    $book = Book::findOrFail($id);
+    $book->delete();
+
+    // Redirect back to dashboar after deleting
+    return redirect()->back()->with('success', 'Book deleted successfully!');
+}
+
+
 }

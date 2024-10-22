@@ -41,3 +41,6 @@ Route::get('/profile', [AuthController::class, 'index'])->name('profile');
 Route::get('/landing', function () {
     return view('landing');  // resources/views/landing.blade.php
 })->name('landing');
+
+// Route for deleting the book card
+Route::delete('/books/{id}', [BookController::class, 'destroy'])->name('books.destroy');
