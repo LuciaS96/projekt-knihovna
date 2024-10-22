@@ -9,8 +9,7 @@
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body>
-  
-    <body class="bg-gray-100">
+
 
     <div class="flex items-center justify-center min-h-screen bg-gray-100">
         <div class="bg-white shadow-lg rounded-lg px-8 py-10 max-w-md w-full">

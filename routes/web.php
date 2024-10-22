@@ -35,3 +35,9 @@ Route::post('logout', [AuthController::class, 'logout'])->middleware('auth')->na
 
 // Route for the profile
 Route::get('/profile', [AuthController::class, 'index'])->name('profile');
+
+
+// Route for the landing page
+Route::get('/landing', function () {
+    return view('landing');  // resources/views/landing.blade.php
+})->name('landing');

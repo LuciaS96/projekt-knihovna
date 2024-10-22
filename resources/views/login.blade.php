@@ -69,7 +69,16 @@
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-indigo-600 py-12"></footer>
+
+    <div class="flex items-center justify-center py-8 ">
+    <a href="/landing"
+        class="px-12 py-3 text-white bg-indigo-600 rounded-full hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+        >ReadR
+    </a>
+    </div>
+        
+
+    <!-- Footer class="bg-indigo-600 py-12"-->
+    <footer ></footer>
   </body>
 </html>
