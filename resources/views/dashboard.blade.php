@@ -106,9 +106,9 @@
                             <p class="mt-2 text-gray-800">{{ $book->description }}</p>
                             <span class="block mt-4 px-2 py-1 text-xs font-semibold bg-green-200 rounded-full">{{ $book->status }}</span>
                         
-                         <!-- edit and delete icons in book car -->
+                         <!-- edit and delete icons in book card -->
                 <div class="mt-4 flex space-x-2">
-                    <!-- icon for editing book card - pen -->
+                    <!-- icon for editing book card - pen + add teh method for editing book cards!! -->
                     <button 
                         class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded" 
                         onclick="openEditForm({{ $book->id }}, '{{ $book->title }}', '{{ $book->genre }}', '{{ $book->description }}', '{{ $book->status }}')">
@@ -119,7 +119,7 @@
 
                     </button>
 
-                    <!-- delete icon for deleting the book card - bin-->
+                    <!-- delete icon for deleting the book card - bin + deleting teh book-->
                     <form action="{{ route('books.destroy', $book->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this book?');">
                         @csrf
                         @method('DELETE')
