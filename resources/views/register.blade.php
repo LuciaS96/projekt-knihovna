@@ -21,7 +21,7 @@
             <!-- Form -->
             <form action="/register" method="POST">
                  @csrf
-                <!-- Name Field -->
+                <!-- Name field -->
                 <div class="mb-4">
                     <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
                     <input type="text" id="name" name="name" required
@@ -29,7 +29,7 @@
                         placeholder="Your Name" />
                 </div>
 
-                <!-- Email Field -->
+                <!-- Email field -->
                 <div class="mb-4">
                     <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
                     <input type="email" id="email" name="email" required
@@ -37,7 +37,7 @@
                         placeholder="you@example.com" />
                 </div>
 
-                <!-- Password Field -->
+                <!-- Password field -->
                 <div class="mb-4">
                     <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
                     <input type="password" id="password" name="password" required
@@ -45,7 +45,7 @@
                         placeholder="Enter your password" />
                 </div>
 
-                <!-- Register Button -->
+                <!-- Register button -->
                 <div class="flex justify-center">
                     <button type="submit"
                         class="w-full py-3 px-6 text-white bg-indigo-600 rounded-lg shadow-lg hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2">
@@ -54,7 +54,7 @@
                 </div>
             </form>
 
-            <!-- Redirect to Login -->
+            <!-- Redirect to login page -->
             <div class="mt-6 text-center">
                 <p class="text-sm text-gray-600">
                     Already have an account?

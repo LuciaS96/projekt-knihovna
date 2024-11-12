@@ -13,22 +13,23 @@
 </head>
 <body class="bg-gray-50 dark:bg-gray-800 min-h-screen">
     <!-- Dashboard Container -->
-    <div class="min-h-screen flex">
+    <div class="flex min-h-screen">
         <!-- Sidebar -->
-        <aside class="w-64 bg-gradient-to-b from-indigo-200 to-indigo-500 dark:bg-gray-900 p-4">
-            <h2 class="text-3xl font-bold text-orange-700 dark:text-white mb-8">📚 My Bookshelf</h2>
-            <nav class="space-y-4">
-                <a href="#" class="block text-lg text-gray-700 dark:text-light hover:text-orange-700">Manage Books</a>
-                <a href="/profile" method="GET" class="block text-lg text-gray-700 dark:text-light hover:text-orange-700">Profile</a>
-                <a href="#" class="block text-lg text-gray-700 dark:text-light hover:text-orange-700">Settings</a>
+        <aside class="w-80 bg-white dark:bg-gray-800 shadow-md p-12">
+            <h2 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-6">📚 My Bookshelf</h2>
+            <nav class="space-y-6">
+                <a href="#" class="block text-base hover:text-indigo-600 dark:hover:text-indigo-400">Manage Books</a>
+                <a href="/profile" class="block text-base hover:text-indigo-600 dark:hover:text-indigo-400">Profile</a>
+                <a href="#" class="block text-base hover:text-indigo-600 dark:hover:text-indigo-400">Settings</a>
             </nav>
         </aside>
+
 
         <!-- Main Content -->
         <div class="flex-grow p-8 bg-gray-100 dark:bg-light">
             
             <header class="flex items-center justify-between mb-8">
-                <h1 class="text-4xl font-extrabold text-orange-700 dark:text-white">Welcome, Book Lover!</h1>
+                <h1 class="text-3xl font-bold text-indigo-700 dark:text-indigo-400">Welcome, Book Lover!</h1>
                 <!-- Logout Button -->
                 <form action="{{ route('logout') }}" method="POST" class="inline">
                     @csrf
@@ -49,17 +50,17 @@
             <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
                 <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold text-orange-700 dark:text-white mb-4">Total Books</h3>
+                    <h3 class="text-xl font-semibold text-black dark:text-white mb-4">Total Books</h3>
                     <p class="text-4xl font-bold text-gray-800 dark:text-light">{{ count($books) }}</p>
                 </div>
                 
                 <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold text-orange-700 dark:text-white mb-4">Books Read This Month</h3>
+                    <h3 class="text-xl font-semibold text-black dark:text-white mb-4">Books Read This Month</h3>
                     <p class="text-4xl font-bold text-gray-800 dark:text-light">{{ count($books) }}</p> 
                 </div>
              
                 <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold text-orange-700 dark:text-white mb-4">Favorite Genre</h3>
+                    <h3 class="text-xl font-semibold text-black dark:text-white mb-4">Favorite Genre</h3>
                     <p class="text-2xl font-bold text-gray-800 dark:text-light">Fantasy</p> 
                 </div>
             </section>
@@ -89,7 +90,7 @@
                             <option value="want_to_read">Want to Read</option>
                         </select>
                     </div>
-                    <button type="submit" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
+                    <button type="submit" class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600">
                         Add Book
                     </button>
                 </form>

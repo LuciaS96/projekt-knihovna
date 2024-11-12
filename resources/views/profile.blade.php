@@ -8,9 +8,9 @@
       
   </head>
 <body class="bg-gradient-to-br from-white to-white min-h-screen flex items-center justify-center py-12"></body>
-    <!-- Profile Card -->
+    <!-- Profile card -->
     <div class="bg-white shadow-xl rounded-lg overflow-hidden w-full max-w-3xl border border-whiet">
-        <!-- Header with Bookshelf Illustration -->
+        <!-- Header with bookshelf illustration -->
         <div class="bg-indigo-600 p-6 flex justify-between items-center">
             <div>
                 <h1 class="text-4xl font-bold text-white">User name</h1>
@@ -19,26 +19,26 @@
             <div class="text-white text-3xl">📚</div>
         </div>
 
-        <!-- Profile Content -->
+        <!-- Profile content -->
         <div class="py-8 px-6 space-y-8 bg-white">
-            <!-- Favorite Books Section -->
+            <!-- Favorite books section -->
             <div>
                 <h2 class="text-2xl font-semibold text-indigo-600 mb-4">Favourites</h2>
 
                 <div class="grid grid-cols-3 gap-4">
-                    <!-- Book Card 1 -->
+                    <!-- Book card 1 -->
                     <div class="bg-indigo-50 border border-white-300 rounded-lg p-4 flex flex-col items-center">
                         <img src="https://via.placeholder.com/100x150" alt="Book cover" class="mb-4 rounded-lg shadow-md" />
                         <h3 class="text-lg font-medium text-orange-800 text-center">"To Kill a Mockingbird"</h3>
                         <p class="text-sm text-gray-600 text-center">by Harper Lee</p>
                     </div>
-                    <!-- Book Card 2 -->
+                    <!-- Book card 2 -->
                     <div class="bg-indigo-50 border border-white-300 rounded-lg p-4 flex flex-col items-center">
                         <img src="https://via.placeholder.com/100x150" alt="Book cover" class="mb-4 rounded-lg shadow-md" />
                         <h3 class="text-lg font-medium text-orange-800 text-center">"1984"</h3>
                         <p class="text-sm text-gray-600 text-center">by George Orwell</p>
                     </div>
-                    <!-- Book Card 3 -->
+                    <!-- Book card 3 -->
                     <div class="bg-indigo-50 border border-white-300 rounded-lg p-4 flex flex-col items-center">
                         <img src="https://via.placeholder.com/100x150" alt="Book cover" class="mb-4 rounded-lg shadow-md" />
                         <h3 class="text-lg font-medium text-orange-800 text-center">"The Great Gatsby"</h3>
@@ -47,19 +47,19 @@
                 </div>
             </div>
 
-            <!-- Personal Info -->
+            <!-- Personal info -->
             <div>
                 <h3 class="text-xl font-medium text-orange-700 mb-2">About Me</h3>
                 <p class="text-gray-700">Avid reader, lover of classic literature, and always on the lookout for a good story. I love cozy evenings with a cup of tea and a great book.</p>
             </div>
 
-            <!-- Favorite Genres -->
+            <!-- Favorite genres -->
             <div>
                 <h3 class="text-xl font-medium text-orange-700 mb-2">Favorite Genres</h3>
                 <p class="text-gray-700">Classics, Fiction, Historical Fiction, Mystery</p>
             </div>
 
-            <!-- Reading Goal -->
+            <!-- Reading goal -->
             <div>
                 <h3 class="text-xl font-medium text-orange-700 mb-2">Reading Goal</h3>
                 <p class="text-gray-700">Read 50 books this year</p>

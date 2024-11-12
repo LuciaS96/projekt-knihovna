@@ -17,7 +17,7 @@ class Book extends Model
         'status',
     ];
 
-    // defined relationship with User
+    // defined relationship with user
     public function user()
     {
         return $this->belongsTo(User::class);

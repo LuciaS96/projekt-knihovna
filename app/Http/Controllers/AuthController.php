@@ -26,7 +26,7 @@ class AuthController extends Controller
     public function login (Request $request)
     {
 
-        // validate and process login credentials of the user
+    // validate and process login credentials of the user
     $credentials = $request->only('email', 'password');
     
     if (auth()->attempt($credentials)) {
@@ -37,7 +37,7 @@ class AuthController extends Controller
         return redirect()->back()->withErrors(['login' => 'Invalid credentials']);
     }
 
-        // show the register page
+    // show the register page
     public function showRegister ()
     {
         return view('register'); 

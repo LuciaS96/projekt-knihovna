@@ -27,7 +27,7 @@ class BookController extends Controller
     // log the incoming request data
     Log::info('Request data:', $request->all());
 
-    // this will validate request data
+    // this will validate requested data
         
     $validated = $request->validate([
             'title' => 'required|string|max:255',          
@@ -39,7 +39,7 @@ class BookController extends Controller
     // log the validated data
     Log::info('Validated data:', $validated);
 
-    // store the book in the database (for the logged-in user)
+    // store the book card data in the database (for the logged-in user)
     $book = Book::create([
             'title' => $validated['title'],
             'genre' => $validated['genre'],
@@ -48,19 +48,20 @@ class BookController extends Controller
             'user_id' => Auth::id(),                       
         ]);
 
-    // 
+    // logs in the message that the book was added succeffully
     Log::info('Book created successfully', ['book_id' => $book->id]);
 
     // redirect back to the dashboard + message 
     return redirect()->route('dashboard')->with('success', 'Book added successfully!');
     }
 
+    // function for deleting the book
     public function destroy($id)
 {
     $book = Book::findOrFail($id);
     $book->delete();
 
-    // Redirect back to dashboar after deleting
+    // redirect back to dashboard after deleting
     return redirect()->back()->with('success', 'Book deleted successfully!');
 }
 
