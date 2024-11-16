@@ -56,7 +56,7 @@
                 
                 <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
                     <h3 class="text-xl font-semibold text-black dark:text-white mb-4">Books Read This Month</h3>
-                    <p class="text-4xl font-bold text-gray-800 dark:text-light">{{ count($books) }}</p> 
+                    <p class="text-4xl font-bold text-gray-800 dark:text-light">{{ $books->where('status', 'read')->count() }}</p> 
                 </div>
              
                 <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
@@ -188,9 +188,6 @@
         </div>
     </div>
 </div>
-
-
-
             
                         </div>
                     @endforeach
