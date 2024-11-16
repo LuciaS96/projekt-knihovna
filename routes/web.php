@@ -44,5 +44,8 @@ Route::get('/landing', function () {
     return view('landing'); 
 })->name('landing');
 
-// Route for deleting the book card
+// Route for DELETING the book card
 Route::delete('/books/{id}', [BookController::class, 'destroy'])->name('books.destroy');
+
+// UPDATE an existing book
+Route::put('/books/{id}', [BookController::class, 'update'])->name('books.update');
